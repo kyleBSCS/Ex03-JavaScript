@@ -1,0 +1,47 @@
+<!-- NAME: Kyle Nathaniel P. Vinuya
+STUDENT NUMBER: 2022-69573
+SECTION: CMSC 100 - U3L
+DESCRIPTION: Exercise 3 | Javascript Basics (Password Validation) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>Password Validation</h1>
+    <h5>*This website is very basic and not sound! Do not use for actual password validation.</h5>
+    <input id="name" placeholder="Enter your name">
+    <input id="pass1" placeholder="Enter your password">
+    <input id="pass2" placeholder="Enter your password again">
+
+    <div>
+        <!-- Button for checking if the password is valid -->
+        <button 
+            type="button" 
+            onClick="document.getElementById('output').innerHTML = validate(document.getElementById('pass1').value, document.getElementById('pass2').value)">
+            Validate
+        </button>
+
+        <!-- Button for reversing the password -->
+        <button
+            type="button" 
+            onClick="document.getElementById('output').innerHTML = reverse(document.getElementById('pass1').value)">
+            Reverse
+        </button>
+
+        <!-- Button for storing the password in an object -->
+        <button
+            type="button" 
+            onClick="document.getElementById('output').innerHTML = Object.values(convert(document.getElementById('name').value, document.getElementById('pass1').value, document.getElementById('pass2').value))">
+            Store
+        </button>
+    </div>
+    
+    <p id="output"></p>
+    
+</body>
+</html>
