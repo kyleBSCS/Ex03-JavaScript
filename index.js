@@ -34,7 +34,15 @@ const reverse = (pass) => {
 }
 
 const convert = (name, pass1, pass2) => {
+    let pass;
 
+    if (validate(pass1, pass2)) pass = reverse(pass1);
+    else pass = pass1;
+
+    return user = {
+        name: name,
+        newpassword: pass
+    }
 }
 
 // console.log(validate("helloworld","hello"))
@@ -42,4 +50,9 @@ const convert = (name, pass1, pass2) => {
 // console.log(validate("hello1234","hello1234"))
 // console.log(validate("Hello1234","Hello1234"))
 // console.log(validate("HELLO1234","HELLO1234"))
-console.log(reverse("Hello1234"))
+
+// console.log(reverse("Hello1234"))
+
+console.log(convert("John","Pass1234","Pass1234"))
+console.log(convert("John","Pass123","Pass12345"))
+
