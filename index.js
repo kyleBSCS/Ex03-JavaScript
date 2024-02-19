@@ -22,15 +22,24 @@ const validate = (pass1, pass2) => {
 }
 
 const reverse = (pass) => {
+    let newString = "";
+    let i = pass.length - 1;
+    
+    while (i >= 0) {
+        newString = newString + pass.charAt(i);
+        i--;
+    }
 
+    return newString;
 }
 
 const convert = (name, pass1, pass2) => {
 
 }
 
-console.log(validate("helloworld","hello"))
-console.log(validate("hello","hello"))
-console.log(validate("hello1234","hello1234"))
-console.log(validate("Hello1234","Hello1234"))
-console.log(validate("HELLO1234","HELLO1234"))
+// console.log(validate("helloworld","hello"))
+// console.log(validate("hello","hello"))
+// console.log(validate("hello1234","hello1234"))
+// console.log(validate("Hello1234","Hello1234"))
+// console.log(validate("HELLO1234","HELLO1234"))
+console.log(reverse("Hello1234"))
